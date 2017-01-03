@@ -40,7 +40,7 @@ Submy: JQuery Validation Forms and Ajax Submit Data
 ```
 
 ## Create Your Rules
-There are two ways to write your own rules, either by data-submy= in input or in the options, you can combine two, provided that there is no conflict of inputs names
+There are two ways to write your own rules, either by `data-submy=' JSON Format '` in input or in the `options` object by `rules` , you can combine two, provided that there is no conflict of inputs names
 
 ### Start Example
 ```html
@@ -93,34 +93,34 @@ There are two ways to write your own rules, either by data-submy= in input or in
 
 | Option     | Type              | Default      | Description                                                                                         |
 |------------|-------------------|--------------|-----------------------------------------------------------------------------------------------------|
-| submitId   | string            | #submit      | form submit btn id                                                                                  |
-| messageId  | string            | #formMessage | form message id                                                                                     |
-| validOn    | string            | submit       | valid form on submit btn click or form change                                                       |
-| rules      | object            | {}           | inputs rules                                                                                        |
-| fileUpload | boolean           | false        | file upload in form                                                                                 |
-| charset    | string            | UTF-8        | form charset                                                                                        |
-| errConsole | boolean           | true         | show submy error, warn , log                                                                        |
-| showError  | array             | []           | default show input error : [] after input , ['before', '#test'], ['after', '#test'], ['in', 'test'] |
-| jsonDone   | callback function | false        | submy json done function                                                                            |
-| done       | callback function | false        | ajax done                                                                                           |
+| `submitId`   | string            | #submit      | form submit btn id                                                                                  |
+| `messageId`  | string            | #formMessage | form message id                                                                                     |
+| `validOn`    | string            | submit       | valid form on `submit` btn click or form `change`                                                       |
+| `rules`      | object            | {}           | inputs rules                                                                                        |
+| `fileUpload` | boolean           | false        | file upload in form                                                                                 |
+| `charset`    | string            | UTF-8        | form charset                                                                                        |
+| `errConsole` | boolean           | true         | show submy error, warn , log                                                                        |
+| `showError`  | array             | []           | default show input error : [] after input , `['before', '#test']`, `['after', '#test']`, `['in', 'test']` |
+| `jsonDone`   | callback function | false        | submy json done function                                                                            |
+| `done`       | callback function | false        | ajax done                                                                                           |
 
 ## Submy Rules Options
 | Options         | Types              | Default                                                                                   | Description                                                                                                                                                          |
 |----------------|-------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| required       | boolean or string | false , if true defualt is : this field is required , if type = file : please choose file | input/select/textarea/input file are required ?                                                                                                                      |
-| type           | string            | input type attr                                                                           | input content types : file , text , email, url, number, username, checkbox, radio .  for validation (date types now not supported , next update Inchaallah  in v1.2) |
-| typeMessage    | string            | this field is not valid                                                                   | type option error message                                                                                                                                            |
-| min            | number            |                                                                                           | minimum number if type = number , minimum length if type = text                                                                                                      |
-| minMessage     | string            | minimum length is: {{min}} | minimum number is: {{min}}                                   | min option error message                                                                                                                                             |
-| max            | number            | maximum length is: {{max}} | maximum number is: {{max}}                                   | maximum number if type = number , maximum length if type = text                                                                                                      |
-| is             | array             | []                                                                                        | run submyIsFunctions : ["equal", "#xInput"] : check this input value is === #xInput input value                                                                      |
-| isEqual        | string            | error in this field                                                                       | is equal error message                                                                                                                                               |
-| types          | array             | ['*/*']                                                                                   | determine file mime types  ex : ['image/png', 'image/jpeg', 'image/gif']                                                                                             |
-| typesMessage   | string            | file type is not allowed                                                                  | types options error message                                                                                                                                          |
-| minSize        | number            |                                                                                           | file minimum size by bytes                                                                                                                                           |
-| minSizeMessage | string            | minimum file size is: {{min}}                                                             | minSize error message                                                                                                                                                |
-| maxSize        | number            |                                                                                           | max file size by bytes                                                                                                                                               |
-| maxSizeMessage | string            | maximum file size is: {{max}}                                                             | maxSize error message                                                                                                                                                |
+| `required`       | boolean or string | false , if true defualt is : this field is required , if type = file : please choose file | input/select/textarea/input file are required ?                                                                                                                      |
+| `type`           | string            | input type attr                                                                           | input content types : `file` , `text` , `email`, `url`, `number`, `username`, `checkbox`, `radio` .  for validation (date types now not supported , next update Inchaallah  in v1.2) |
+| `typeMessage`    | string            | this field is not valid                                                                   | type option error message                                                                                                                                            |
+| `min`            | number            |                                                                                           | minimum number if type = number , minimum length if type = text                                                                                                      |
+| `minMessage`     | string            | minimum length is: {{min}} | minimum number is: {{min}}                                   | min option error message                                                                                                                                             |
+| `max`           | number            | maximum length is: {{max}} | maximum number is: {{max}}                                   | maximum number if type = number , maximum length if type = text                                                                                                      |
+|  `is`             | array             | []                                                                                        | run submyIsFunctions : `["equal", "#xInput"]` : check this input value is === #xInput input value                                                                      |
+| `isEqual`        | string            | error in this field                                                                       | is equal error message                                                                                                                                               |
+| `types`          | array             | ['*/*']                                                                                   | determine file mime types  ex : `['image/png', 'image/jpeg', 'image/gif']`                                                                                             |
+| `typesMessage`   | string            | file type is not allowed                                                                  | types options error message                                                                                                                                          |
+| `minSize`        | number            |                                                                                           | file minimum size by bytes                                                                                                                                           |
+| `minSizeMessage` | string            | minimum file size is: {{min}}                                                             | minSize error message                                                                                                                                                |
+| `maxSize`        | number            |                                                                                           | max file size by bytes                                                                                                                                               |
+| `maxSizeMessage` | string            | maximum file size is: {{max}}                                                             | maxSize error message                                                                                                                                                |
 
 
 full documentation is comming
