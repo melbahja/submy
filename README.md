@@ -86,7 +86,7 @@ There are two ways to write your own rules, either by `data-submy=' JSON Format 
 </script>  
 ```
 
-### Full Example
+### Example 2
 
 ```html
 <form id="ex2">
@@ -216,7 +216,7 @@ echo '<div> test </div>';
 | `maxSizeMessage` | string            | maximum file size is: {{max}}                                                             | maxSize error message                                                                                                                                                |
 
 
-full documentation is comming
+full documentation is coming
 
 # Support & Bugs
 Submit Bug reports on: mohamed@elbahja.me
