@@ -217,3 +217,9 @@ echo '<div> test </div>';
 
 
 full documentation is comming
+
+# Support & Bugs
+Submit Bug reports on: mohamed@elbahja.me
+
+# License
+Copyright © Mohamed Elbahja . [GPL-3.0](https://github.com/melbahja/submy/blob/master/LICENSE)
