@@ -88,6 +88,96 @@ There are two ways to write your own rules, either by `data-submy=' JSON Format 
 
 ### Full Example
 
+```html
+<form id="ex2">
+
+       <input name="fullname"> <!--See Rules -->
+       <input name="user-name" data-submy='{"required": "please add your username", "type": "username", "min": 4, "max": 10, "typeMesasge": "please add a valid username"}'>
+
+
+       <input name="useremail">
+       
+       <!-- required false -->
+       <select name="ctry">  
+           <option value="uk">UK</option>
+           <option value="us">USA</option>
+       </select>
+
+       <textarea name="text-area" data-submy='{"required": true, "max": 500, "maxMessage": "maximum text is {{max}} chars"}'></textarea>
+
+       <input id="password" name="user-pass" data-submy='{"required": true, "type": "password"}'>
+
+       <input name="conf-pass" data-submy='{"required": true, "type": "password", "is": ["equal", "#password"], "showError": ["after", "#notPassMessage"]}'>
+
+       <div id="notPassMessage"></div>
+
+       <input name="thisFile" data-submy='{"type": "file", "typeMessage": "please add your image", "minSize": 30, "minSizeMessage": "min file size is {{min}}", "maxSize": 500000}'>
+
+       <div id="message"></div>
+
+       <button id="loginSubmit">submit</button>
+</form>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="Submy.min.js"></script>
+<script type="text/javascript">
+    
+    $('#ex2').submy({
+        submitId: '#loginSubmit', 
+        messageId: '#message',
+        fileUpload: true,
+        rules: {
+            fullname: {
+                required: true, 
+                type: "text", 
+                min: 4, 
+                max: 30
+            },
+            useremail: {
+                required: "please add your email", 
+                type: "email", 
+                typeMessage: "please add valid email"
+            }
+        },
+        ajax: {
+            url: 'http://site.com/submit.php',
+            //method: 'POST', ajax default method is POST
+            //....
+        },
+    }); 
+</script>  
+```
+
+#### submit.php
+```php
+<?php
+
+print_r($_FILES);
+print_r($_POST);
+
+```
+#### submit.php example 2
+```php
+<?php
+
+$res = new \stdClass;
+
+$res->type = 'danger'; // info , success ...
+$res->message = 'email not exists';
+
+echo json_encode($res);
+
+```
+
+#### submit.php example 3
+```php
+<?php
+
+// echo '<script>alert("hi");</script>';
+echo '<div> test </div>';
+
+```
+
 ## Submy Options
 
 
