@@ -112,7 +112,10 @@ There are two ways to write your own rules, either by `data-submy=' JSON Format 
        <div id="notPassMessage"></div>
 
        <input name="thisFile" data-submy='{"type": "file", "typeMessage": "please add your image", "minSize": 30, "minSizeMessage": "min file size is {{min}}", "maxSize": 500000}'>
-
+       
+       
+        <input value="checkbox value test" data-submy='{"type": "checkbox", "required": true}'>
+       
        <div id="message"></div>
 
        <button id="loginSubmit">submit</button>
