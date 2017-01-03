@@ -366,7 +366,7 @@
 
                     } else {
 
-                        $submy.console().warn('SubmyWarn: type not found in ' + this.formElements[k].localName + ' & name = ' + this.formElements[k].name);
+                        this.console().warn('SubmyWarn: type not found in ' + this.formElements[k].localName + ' & name = ' + this.formElements[k].name);
                     }
 
                 } else {
@@ -415,7 +415,7 @@
 
             } else {
 
-                $submy.console().error('SubmyError: rules is not valid or not found in ' + this.formElements[k].localName + ' & name = ' + this.formElements[k].name);
+                this.console().error('SubmyError: rules is not valid or not found in ' + this.formElements[k].localName + ' & name = ' + this.formElements[k].name);
             } // endIF
 
             if (error === true) {
@@ -510,7 +510,7 @@
 
             } else {
 
-                $submy.console().warn('submy: error data not valid or not found in ' + element.get(0).localName + ' and name="' + element.get(0).name + '"');
+                this.console().warn('submy: error data not valid or not found in ' + element.get(0).localName + ' and name="' + element.get(0).name + '"');
             }
         } // end for
 
