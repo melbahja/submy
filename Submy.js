@@ -51,7 +51,7 @@
 
         $submyAjax = {
             method: 'POST',
-            processData: true,
+            processData: false,
             data: null
         },
 
